@@ -1026,11 +1026,17 @@ nav ul{
 
 
 /* ------------ --------------- */
+.footer{
+    background-color: #142132;
+}
 footer .container{
     padding: 4rem 0.5rem 0;
 }
 .footer-grid{
     grid-template-columns: 0.75fr 0.75fr 1fr;
+}
+.footer h3{
+    color: #fff3cd;
 }
 footer p{
     margin: 1rem 0;

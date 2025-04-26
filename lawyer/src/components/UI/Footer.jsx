@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 export const Footer = () => {
     return (
         <footer className="footer">
-            {/* <div className="container grid footer-grid grid-three-cols">
+            <div className="container grid footer-grid grid-three-cols">
                 <div className="footer-about">
-                    <h2>Lawyer</h2>
+                    <h3>Lawyer</h3>
                     <p>Professional, experienced, and ready to help you navigate your legal challenges. Get in touch for a consultation today.</p>
                 </div>
 
@@ -25,7 +25,7 @@ export const Footer = () => {
                     <p>contact@lawyer.com</p>
                     <p>Your City, Your Country</p>
                 </div>
-            </div> */}
+            </div>
 
             <div className="footer-bottom">
                 <p>&copy; 2025 Lawyer. All rights reserved.</p>
