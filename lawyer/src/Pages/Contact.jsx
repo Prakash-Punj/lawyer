@@ -11,7 +11,7 @@ export const Contact = () => {
         console.log("Form data being sent:", formInputData);
 
         try {
-            const res = await fetch("https://<your-backend>.up.railway.app/api/contact", {
+            const res = await fetch("https://probable-brain-production.up.railway.app/api/contact", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
