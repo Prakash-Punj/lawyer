@@ -18,7 +18,11 @@ mongoose.connect(mongoURI)
     .catch((err) => console.error("❌ Error connecting to MongoDB:", err));
 
 
-app.use(cors());
+    const allowedOrigins = ['https://lawyer-prakash.netlify.app']; 
+        app.use(cors({
+        origin: allowedOrigins,
+    }));
+
 app.use(express.json());
 
 
