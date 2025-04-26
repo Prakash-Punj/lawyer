@@ -26,6 +26,10 @@ app.get('/', (req, res) => {
     res.redirect('/api/contact');
 });
 
+app.get('/api/contact', (req, res) => {
+    res.status(200).json({ message: "Welcome to the contact page. Please send a POST request to submit a form." });
+});
+
 
 const formSchema = new mongoose.Schema({
     name: { type: String, required: true },
