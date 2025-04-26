@@ -22,6 +22,11 @@ app.use(cors());
 app.use(express.json());
 
 
+app.get('/', (req, res) => {
+    res.redirect('/api/contact');
+});
+
+
 const formSchema = new mongoose.Schema({
     name: { type: String, required: true },
     email: { type: String, required: true },
