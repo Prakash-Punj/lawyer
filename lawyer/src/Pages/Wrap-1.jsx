@@ -1,4 +1,38 @@
 export const Wrap_1 = () => {
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(e.target);
+        const formInputData = Object.fromEntries(formData.entries());
+
+        console.log("Form data being sent:", formInputData);
+
+        try {
+            const res = await fetch("https://probable-brain-production.up.railway.app/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formInputData),
+            });
+
+            const result = await res.json();
+            if (res.status === 200) {
+                console.log(result.message);
+                alert("Message sent successfully!");
+                e.target.reset();
+            } else {
+                console.error("Backend error:", result.message);
+                alert(result.message || "Something went wrong.");
+            }
+        } catch (error) {
+            console.error("Network error:", error);
+            alert("Failed to send. Please try again later.");
+        }
+    };
+
+
     return(
 
         <div className="user-contact">
